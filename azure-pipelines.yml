@@ -12,7 +12,7 @@ pool:
 steps:
 - task: JFrogGradle@1
   inputs:
-    #gradleBuildFile: 'build.gradle'
+    gradleBuildFile: 'build.gradle.kts'
     tasks: 'artifactoryPublish'
     artifactoryResolverService: 'arti'
     sourceRepo: 'sri-multi-modile-gradle-dev'
