@@ -12,6 +12,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: JFrogToolsInstaller@1
+  inputs:
+    artifactoryConnection: 'arti'
+    cliInstallationRepo: 'azure-varoon-remote'
 - task: JFrogGradle@1
   inputs:
     gradleBuildFile: 'build.gradle.kts'
