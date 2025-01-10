@@ -22,3 +22,8 @@ steps:
     usesPlugin: true
     useWrapper: true
     javaHomeOption: 'JDKVersion'
+- task: JFrogPublishBuildInfo@1
+  inputs:
+    artifactoryConnection: 'arti'
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
