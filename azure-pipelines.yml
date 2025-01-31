@@ -14,7 +14,7 @@ steps:
 - task: JFrogGradle@1
   inputs:
     gradleBuildFile: 'build.gradle.kts'
-    tasks: 'artifactoryPublish'
+    tasks: 'clean artifactoryPublish'
     artifactoryResolverService: 'arti'
     sourceRepo: 'sri-multi-modile-gradle-dev'
     artifactoryDeployerService: 'arti'
