@@ -20,7 +20,7 @@ steps:
     artifactoryDeployerService: 'arti'
     targetRepo: 'sri-multi-modile-gradle-dev'
     usesPlugin: true
-    useWrapper: true
+    useWrapper: false
     javaHomeOption: 'JDKVersion'
 
 - task: JFrogAudit@1
