@@ -23,12 +23,6 @@ steps:
     useWrapper: false
     javaHomeOption: 'JDKVersion'
 
-- task: JFrogAudit@1
-  inputs:
-    xrayConnection: 'xray'
-    watchesSource: 'watches'
-    watches: 'elu-maven'
-    allowFailBuild: true
 - task: JFrogPublishBuildInfo@1
   inputs:
     artifactoryConnection: 'arti'
