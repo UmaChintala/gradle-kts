@@ -11,21 +11,31 @@ variables:
 pool:
   vmImage: ubuntu-latest
 steps:
+
 - task: JFrogGradle@1
   inputs:
-    gradleBuildFile: 'build.gradle.kts'
-    tasks: 'clean artifactoryPublish'
-    artifactoryResolverService: 'arti'
-    sourceRepo: 'sri-multi-modile-gradle-dev'
-    artifactoryDeployerService: 'arti'
-    targetRepo: 'sri-multi-modile-gradle-dev'
-    usesPlugin: true
-    useWrapper: false
-    javaHomeOption: 'JDKVersion'
-
-- task: JFrogPublishBuildInfo@1
-  inputs:
-    artifactoryConnection: 'arti'
+    gradleBuildFile: 'build.gradle'
+    tasks: 'artifactoryPublish'
+    collectBuildInfo: true
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
+    javaHomeOption: 'JDKVersion'
+
+# - task: JFrogGradle@1
+#   inputs:
+#     gradleBuildFile: 'build.gradle.kts'
+#     tasks: 'clean artifactoryPublish'
+#     artifactoryResolverService: 'arti'
+#     sourceRepo: 'sri-multi-modile-gradle-dev'
+#     artifactoryDeployerService: 'arti'
+#     targetRepo: 'sri-multi-modile-gradle-dev'
+#     usesPlugin: true
+#     useWrapper: false
+#     javaHomeOption: 'JDKVersion'
+
+# - task: JFrogPublishBuildInfo@1
+#   inputs:
+#     artifactoryConnection: 'arti'
+#     buildName: '$(Build.DefinitionName)'
+#     buildNumber: '$(Build.BuildNumber)'
 
