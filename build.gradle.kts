@@ -3,7 +3,6 @@ import org.jfrog.gradle.plugin.artifactory.task.ArtifactoryTask
 plugins {
     java
     `maven-publish`
-    id("com.jfrog.artifactory") version "5.+"
 }
 
 fun javaProjects() = subprojects.filter {
